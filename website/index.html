@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI Social Impact Dashboard demonstrating smart city solutions for waste management, traffic optimization, and environmental monitoring.">
+    <title>Smart AI Social Impact</title>
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="light-mode">
+    <!-- Decorative Background Elements -->
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+    <div class="bg-shape shape-3"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar glass-effect">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-leaf"></i> EcoMind AI
+            </a>
+            <ul class="nav-links">
+                <li><a href="#hero" class="active">Home</a></li>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#report">Report Issue</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="btn-icon" aria-label="Toggle Dark Mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero section">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1 class="animate-up">AI for a <span class="gradient-text">Better Future</span></h1>
+                    <p class="animate-up delay-1">Empowering communities with smart, AI-driven solutions for waste management, traffic optimization, and environmental monitoring.</p>
+                    <div class="hero-buttons animate-up delay-2">
+                        <a href="#dashboard" class="btn btn-primary">View Dashboard</a>
+                        <a href="#report" class="btn btn-secondary glass-effect">Report Issue</a>
+                    </div>
+                </div>
+                <div class="hero-visual animate-up delay-3 glass-effect">
+                    <div class="status-ring">
+                        <div class="status-circle pulse"></div>
+                        <span>System Active & Monitoring</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Dashboard Section -->
+        <section id="dashboard" class="dashboard section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Smart City Overview</h2>
+                    <div class="domain-tabs glass-effect">
+                        <button class="tab-btn active" data-domain="all">All</button>
+                        <button class="tab-btn" data-domain="waste">Waste</button>
+                        <button class="tab-btn" data-domain="traffic">Traffic</button>
+                        <button class="tab-btn" data-domain="environment">Environment</button>
+                    </div>
+                </div>
+                
+                <div class="dashboard-grid">
+                    <!-- Impact Metrics Card -->
+                    <div class="card glass-effect metrics-card slide-in">
+                        <h3><i class="fa-solid fa-chart-line"></i> Impact Metrics</h3>
+                        <div class="metrics-grid">
+                            <div class="metric">
+                                <span class="metric-value">2,450</span>
+                                <span class="metric-label">Issues Resolved</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">98%</span>
+                                <span class="metric-label">AI Accuracy</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">12.5k</span>
+                                <span class="metric-label">Active Alerts</span>
+                            </div>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-header">
+                                <span>City Optimization Progress</span>
+                                <span>78%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 78%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AI Suggestions Card -->
+                    <div class="card glass-effect suggestions-card slide-in delay-1">
+                        <h3><i class="fa-solid fa-lightbulb"></i> AI Output Feed</h3>
+                        <ul class="suggestion-list" id="ai-feed">
+                            <li class="suggestion-item">
+                                <div class="icon-box warning"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                                <div class="suggestion-content">
+                                    <h4>Traffic Congestion Detected</h4>
+                                    <p>Rerouting public transit to avoid Main Street.</p>
+                                </div>
+                                <span class="badge high">High Risk</span>
+                            </li>
+                            <li class="suggestion-item">
+                                <div class="icon-box success"><i class="fa-solid fa-recycle"></i></div>
+                                <div class="suggestion-content">
+                                    <h4>Waste Collection Needed</h4>
+                                    <p>Zone D bins at 90% capacity. Dispatching truck.</p>
+                                </div>
+                                <span class="badge medium">Med Risk</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reporting Section (AI Form Simulation) -->
+        <section id="report" class="report section">
+            <div class="container">
+                <div class="report-wrapper glass-effect">
+                    <!-- Input Form -->
+                    <div class="report-form-container">
+                        <h2>Report an Issue</h2>
+                        <p>Let AI analyze and suggest solutions for community issues.</p>
+                        <form id="issue-form" class="ai-form">
+                            <div class="form-group">
+                                <label for="category">Category</label>
+                                <div class="select-wrapper">
+                                    <select id="category" required>
+                                        <option value="" disabled selected>Select an issue type...</option>
+                                        <option value="waste">Waste Management</option>
+                                        <option value="traffic">Traffic & Infrastructure</option>
+                                        <option value="environment">Environmental Hazard</option>
+                                        <option value="safety">Public Safety</option>
+                                    </select>
+                                    <i class="fa-solid fa-chevron-down select-icon"></i>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="description">Issue Description</label>
+                                <textarea id="description" rows="4" placeholder="Describe the issue in detail..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-submit">
+                                <span>Analyze with AI</span>
+                                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <!-- AI Response Area -->
+                    <div class="ai-response-container glass-effect hidden" id="ai-response-panel">
+                        <!-- Loading State -->
+                        <div class="loading-state" id="loading-state">
+                            <div class="spinner"></div>
+                            <p>Analyzing context and generating solutions...</p>
+                        </div>
+                        <!-- Result State -->
+                        <div class="result-state hidden" id="result-state">
+                            <div class="result-header">
+                                <h3><i class="fa-solid fa-microchip"></i> AI Analysis Complete</h3>
+                                <span class="badge" id="result-risk">Medium Risk</span>
+                            </div>
+                            <div class="result-body">
+                                <div class="result-box">
+                                    <h4>Suggested Actions</h4>
+                                    <ul id="result-actions" class="action-list">
+                                        <!-- Dynamically populated -->
+                                    </ul>
+                                </div>
+                                <div class="result-box">
+                                    <h4>Recommendations for City Planners</h4>
+                                    <p id="result-recommendation"></p>
+                                </div>
+                            </div>
+                            <button type="button" id="reset-form" class="btn btn-secondary btn-sm" style="margin-top: 1rem;">Report Another Issue</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer glass-effect">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fa-solid fa-leaf"></i> EcoMind AI
+                </div>
+                <p>Social Impact & Smart Systems Gen AI Demo</p>
+                <div class="social-links">
+                    <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast glass-effect hidden">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toast-message">Report submitted successfully!</span>
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
